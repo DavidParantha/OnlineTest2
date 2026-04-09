@@ -12,7 +12,8 @@ public class Main {
         lib.displayAvailableBooks();
         System.out.println("\nIssued book 2:");
         lib.issueBook(2);
-        System.out.println("\nIssu book 2 again:");
+
+          System.out.println("\nIssu book 2 again:");
         lib.issueBook(2);
         System.out.println("\nReturn book 2:");
         lib.returnBook(2);
