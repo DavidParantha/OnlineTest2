@@ -1,17 +1,26 @@
 package org.example;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
-
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        Library lib = new Library();
+        lib.addBook(new Book(1, "Java Basics", "David", true));
+        lib.addBook(new Book(2, "Data Structures", "Suman Sir", true));
+        lib.addBook(new Book(3, "Operating Systems", "Akash", true));
+        lib.addBook(new Book(4, "Computer Networks", "Mehere", true));
+        lib.addBook(new Book(5, "DBMS Concepts", "Ravi", true));
+        System.out.println("Available Books:");
+        lib.displayAvailableBooks();
+        System.out.println("\nIssued book 2:");
+        lib.issueBook(2);
+        System.out.println("\nIssu book 2 again:");
+        lib.issueBook(2);
+        System.out.println("\nReturn book 2:");
+        lib.returnBook(2);
+        System.out.println("\nReturn book 2 again:");
+        lib.returnBook(2);
+        System.out.println("\nIssue invalid book:");
+        lib.issueBook(10);
+        System.out.println("\nAvailable Books now:");
+        lib.displayAvailableBooks();
     }
 }
